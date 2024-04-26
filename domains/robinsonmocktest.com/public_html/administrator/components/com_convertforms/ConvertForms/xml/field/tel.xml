@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="basic">
+		
+        
+        <field name="@free_enable_country_selector" type="nr_pro"
+            label="COM_CONVERTFORMS_DISPLAY_COUNTRY_CODE_SELECTOR"
+            description="COM_CONVERTFORMS_DISPLAY_COUNTRY_CODE_SELECTOR_DESC"
+        />
+        <field name="@free_detectcountry" type="nr_pro"
+            label="COM_CONVERTFORMS_FIELD_COUNTRY_DETECT"
+            description="COM_CONVERTFORMS_FIELD_COUNTRY_DETECT_DESC"
+        />
+        
+	</fieldset>
+	<fieldset name="restrictions">
+	    <field name="inputmask" type="inputmask"
+	    	label="COM_CONVERTFORMS_INPUT_MASK_DEPRECATED"
+	    	description="COM_CONVERTFORMS_INPUT_MASK_DESC"
+	    />
+        <field name="readonly" type="nrtoggle" 
+            label="COM_CONVERTFORMS_READONLY"
+            description="COM_CONVERTFORMS_READONLY_DESC"
+		/>
+	</fieldset>
+</form>

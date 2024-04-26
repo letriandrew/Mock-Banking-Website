@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="version" type="list"
+            label="NR_VERSION"
+            description="COM_CONVERTFORMS_FIELD_RECAPTCHA_VERSION_DESC"
+            default="v3">
+                <option value="v2_checkbox">COM_CONVERTFORMS_RECAPTCHA_V2_CHECKBOX</option>
+                <option value="v2_invisible">COM_CONVERTFORMS_RECAPTCHA_V2_INVISIBLE</option>
+                <option value="v3">COM_CONVERTFORMS_RECAPTCHA_V3</option>
+        </field>
+        <field name="theme" type="list"
+            label="NR_THEME"
+            description="COM_CONVERTFORMS_FIELD_RECAPTCHA_THEME_DESC"
+            showon="version:v2_checkbox"
+            default="light">
+                <option value="light">NR_LIGHT</option>
+                <option value="dark">NR_DARK</option>
+        </field>
+        <field name="size" type="list"
+            label="NR_SIZE"
+            description="COM_CONVERTFORMS_FIELD_RECAPTCHA_SIZE_DESC"
+            showon="version:v2_checkbox"
+            default="normal">
+                <option value="normal">NR_NORMAL</option>
+                <option value="compact">NR_COMPACT</option>
+        </field>
+        <field name="badge" type="list" 
+            label="COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE"
+            description="COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_DESC"
+            showon="version:v2_invisible"
+            default="inline">
+                <option value="inline">COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_INLINE</option>
+                <option value="bottomright">COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_BOTTOMRIGHT</option>
+                <option value="bottomleft">COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_BOTTOMLEFT</option>
+        </field>
+        <field name="badge_v3" type="list" 
+            label="COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE"
+            description="COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_DESC"
+            showon="version:v3"
+            default="inline">
+                <option value="inline">COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_INLINE</option>
+                <option value="bottomright">COM_CONVERTFORMS_FIELD_RECAPTCHA_INVIS_BADGE_BOTTOMRIGHT</option>
+        </field>
+        <field name="score" type="nrrangeslider"
+            label="COM_CONVERTFORMS_RECPATCHA_V3_SCORE"
+            description="COM_CONVERTFORMS_RECPATCHA_V3_SCORE_DESC"
+            min="0"
+            step="0.1"
+            max="1"
+            default="0.5"
+            class="input-small"
+            showon="version:v3"
+        />
+    </fieldset>
+</form>

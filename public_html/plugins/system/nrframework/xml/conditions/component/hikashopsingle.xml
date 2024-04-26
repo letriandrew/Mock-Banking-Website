@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+        <field name="operator" type="comparator"/>
+        <field name="value" type="componentitems"
+            label="NR_HIKA_PRODUCT"
+            description="NR_CONDITION_HIKA_PRODUCT_DESC"
+            multiple="true"
+            class="hasChosen"
+            table="hikashop_product"
+            column_id="product_id"
+            column_title="product_name"
+            column_state="product_published"
+        />
+    </fieldset>
+</form>

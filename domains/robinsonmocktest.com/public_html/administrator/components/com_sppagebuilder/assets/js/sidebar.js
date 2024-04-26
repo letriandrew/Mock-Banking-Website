@@ -1,0 +1,7 @@
+/**
+* @package SP Page Builder
+* @author JoomShaper http://www.joomshaper.com
+* @copyright Copyright (c) 2010 - 2021 JoomShaper
+* @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+jQuery((function(e){e("[data-pb-sidebar-action]").on("click",(function(a){a.preventDefault();var i=e(this);e(".sp-pagebuilder-sidebar-tabs").find("[data-pb-sidebar-action]").not(this).parent().removeClass("active"),i.parent().toggleClass("active")})),e(".sp-pagebuilder-close-sidebar").on("click",(function(a){a.preventDefault(),e(".sp-pagebuilder-sidebar-tabs").find(".sp-pagebuilder-sidebar-tab-item").removeClass("active")}));var a=e(".sp-pagebuilder-admin [data-sidebar]").html(),i=e("#sidebarmenu").find("> nav"),d=i.find("ul.main-nav:not(.sppagebuilder-nav)");d.hide();var n=e("[data-joomla-sidebar]").html();d.prepend(n),i.append(a);var r=i.find("ul.sppagebuilder-nav");if(e(".sp-pagebuilder-media-categories").length){var s=e(".sp-pagebuilder-media-categories").html();e(".item-sp-pagebuilder-media").find(">a").removeClass("no-dropdown").addClass("has-arrow"),e(".item-sp-pagebuilder-media").append(s),e(".sp-pagebuilder-media-categories").remove()}e(document).on("click","[data-back-joomla]",(function(){d.show(),r.hide()})),e(document).on("click","[data-back-sppagebuilder]",(function(){d.hide(),r.show()}))}));

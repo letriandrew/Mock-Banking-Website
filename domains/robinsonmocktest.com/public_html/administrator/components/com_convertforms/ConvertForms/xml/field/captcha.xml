@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="complexity" type="list"
+        	label="COM_CONVERTFORMS_FIELD_CAPTCHA_COMPLEXITY"
+        	description="COM_CONVERTFORMS_FIELD_CAPTCHA_COMPLEXITY_DESC">
+            <option value="">NR_LOW</option>
+            <option value="medium">NR_MEDIUM</option>
+            <option value="high">NR_HIGH</option>
+        </field>
+	    <field name="wrong_answer_text" type="text"
+	    	label="COM_CONVERTFORMS_FIELD_CAPTCHA_WRONG_ANSWER"
+	    	description="COM_CONVERTFORMS_FIELD_CAPTCHA_WRONG_ANSWER_DESC"
+            default="COM_CONVERTFORMS_FIELD_CAPTCHA_WRONG_ANSWER_HINT"
+            hint="COM_CONVERTFORMS_FIELD_CAPTCHA_WRONG_ANSWER_HINT"
+	    />
+	    <field name="placeholder" type="text"
+	    	label="COM_CONVERTFORMS_PLACEHOLDER_NAME"
+	    	description="COM_CONVERTFORMS_PLACEHOLDER_NAME_DESC"
+            hint="COM_CONVERTFORMS_FIELD_CAPTCHA_EQUATION"
+	    />
+    </fieldset>
+</form>

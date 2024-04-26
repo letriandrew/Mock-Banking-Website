@@ -1,0 +1,1 @@
+UPDATE `#__sppagebuilder` SET `css` = '' WHERE `css` = 'null' OR `css` IS NULL;

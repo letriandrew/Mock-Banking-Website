@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="4.0" method="upgrade" group="content">
+	<name>DirectPHP</name>
+	<creationDate>Sep 23, 2016</creationDate>
+	<author>kksou</author>
+	<authorEmail>support@kksou.com</authorEmail>
+	<authorUrl>http://www.kksou.com</authorUrl>
+	<copyright>(C) kksou.com. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>4.02</version>
+	<description>PLG_CONTENT_DIRECTPHP_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="directphp">directphp.php</filename>
+	</files>
+	<updateservers>
+	    <server type="extension" name="DirectPHP" priority="1">https://www.kksou.com/update/update_DirectPHP.xml</server>
+	</updateservers>
+	<languages folder="administrator/language">
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_directphp.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_directphp.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="using_no_editor"
+					type="radio"
+					default="0"
+					description="PLG_CONTENT_DIRECTPHP_PARAMS_NOEDITOR_DESC"
+					label="PLG_CONTENT_DIRECTPHP_PARAMS_NOEDITOR_LABEL">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="block_list"
+					type="textarea"
+					default="basename, chgrp, chmod, chown, clearstatcache, copy, delete, dirname, disk_free_space, disk_total_space, diskfreespace, fclose, feof, fflush, fgetc, fgetcsv, fgets, fgetss, file_exists, file_get_contents, file_put_contents, file, fileatime, filectime, filegroup, fileinode, filemtime, fileowner, fileperms, filesize, filetype, flock, fnmatch, fopen, fpassthru, fputcsv, fputs, fread, fscanf, fseek, fstat, ftell, ftruncate, fwrite, glob, lchgrp, lchown, link, linkinfo, lstat, move_uploaded_file, opendir, parse_ini_file, pathinfo, pclose, popen, readfile, readdir, readllink, realpath, rename, rewind, rmdir, set_file_buffer, stat, symlink, tempnam, tmpfile, touch, umask, unlink, fsockopen, system, exec, passthru, escapeshellcmd, pcntl_exec, proc_open, proc_close, mkdir, rmdir"
+					label="PLG_CONTENT_DIRECTPHP_PARAMS_BLOCKLIST_LABEL"
+					description="PLG_CONTENT_DIRECTPHP_PARAMS_BLOCKLIST_DESC"
+					cols="20"
+					rows="10"
+				/>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

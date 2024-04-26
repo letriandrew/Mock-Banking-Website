@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="tasks" label="COM_CONVERTFORMS_TASKS" addfieldpath="plugins/convertformstools/tasks/form" tab="tasks">
+        <field name="tasks" type="tasks"
+            hiddenLabel="true"
+        />
+    </fieldset>
+</form>

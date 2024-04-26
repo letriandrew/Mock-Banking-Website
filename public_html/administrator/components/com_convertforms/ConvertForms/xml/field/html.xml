@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="basic">
+	    <field name="text" type="textarea"
+	    	label="COM_CONVERTFORMS_FIELD_HTML"
+	    	description="COM_CONVERTFORMS_FIELD_HTML_DESC"
+	    	class="editorx show-smart-tags"
+			default="Add custom &lt;b>freetext&lt;/b> or &lt;i>HTML&lt;/i> code"
+	    />
+    </fieldset>
+</form>

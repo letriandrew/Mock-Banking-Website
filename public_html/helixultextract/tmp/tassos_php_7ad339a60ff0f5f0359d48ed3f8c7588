@@ -1,0 +1,871 @@
+<?php
+defined('_JEXEC') or die;
+function tassos_php_7ad339a60ff0f5f0359d48ed3f8c7588(&$displayData = null) {
+                if ($displayData) {
+                    extract($displayData, EXTR_REFS);
+                }
+            
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+$user = JFactory::getUser();
+
+if ($user->username == 'user1') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query2 = $db->getQuery(true);
+$query->select('checking')->from('account1');
+$query2->select('savings')->from('account1');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query2);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user2') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query2 = $db->getQuery(true);
+$query->select('checking')->from('account2');
+$query2->select('savings')->from('account2');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query2);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user3') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query3 = $db->getQuery(true);
+$query->select('checking')->from('account3');
+$query3->select('savings')->from('account3');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query3);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user4') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query4 = $db->getQuery(true);
+$query->select('checking')->from('account4');
+$query4->select('savings')->from('account4');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query4);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user5') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query5 = $db->getQuery(true);
+$query->select('checking')->from('account5');
+$query5->select('savings')->from('account5');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query5);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user6') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query6 = $db->getQuery(true);
+$query->select('checking')->from('account6');
+$query6->select('savings')->from('account6');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query6);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}
+else if ($user->username == 'user7') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query7 = $db->getQuery(true);
+$query->select('checking')->from('account7');
+$query7->select('savings')->from('account7');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query7);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}
+else if ($user->username == 'user8') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query8 = $db->getQuery(true);
+$query->select('checking')->from('account8');
+$query8->select('savings')->from('account8');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query8);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user9') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query9 = $db->getQuery(true);
+$query->select('checking')->from('account9');
+$query9->select('savings')->from('account9');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query9);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user10') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query10 = $db->getQuery(true);
+$query->select('checking')->from('account10');
+$query10->select('savings')->from('account10');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query10);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user11') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query11 = $db->getQuery(true);
+$query->select('checking')->from('account11');
+$query11->select('savings')->from('account11');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query11);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user12') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query12 = $db->getQuery(true);
+$query->select('checking')->from('account12');
+$query12->select('savings')->from('account12');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query12);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user13') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query13 = $db->getQuery(true);
+$query->select('checking')->from('account13');
+$query13->select('savings')->from('account13');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query13);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user14') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query14 = $db->getQuery(true);
+$query->select('checking')->from('account14');
+$query14->select('savings')->from('account14');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query14);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user15') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query15 = $db->getQuery(true);
+$query->select('checking')->from('account15');
+$query15->select('savings')->from('account15');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query15);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+
+else if ($user->username == 'user16') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query16 = $db->getQuery(true);
+$query->select('checking')->from('account16');
+$query16->select('savings')->from('account16');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query16);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user17') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query17 = $db->getQuery(true);
+$query->select('checking')->from('account17');
+$query17->select('savings')->from('account17');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query17);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user18') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query18 = $db->getQuery(true);
+$query->select('checking')->from('account18');
+$query18->select('savings')->from('account18');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query18);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user19') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query19 = $db->getQuery(true);
+$query->select('checking')->from('account19');
+$query19->select('savings')->from('account19');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query19);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user20') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query20 = $db->getQuery(true);
+$query->select('checking')->from('account20');
+$query20->select('savings')->from('account20');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query20);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user21') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query21 = $db->getQuery(true);
+$query->select('checking')->from('account21');
+$query21->select('savings')->from('account21');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query21);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user22') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query22 = $db->getQuery(true);
+$query->select('checking')->from('account22');
+$query22->select('savings')->from('account22');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query22);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user23') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query23 = $db->getQuery(true);
+$query->select('checking')->from('account23');
+$query23->select('savings')->from('account23');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query23);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user24') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query24 = $db->getQuery(true);
+$query->select('checking')->from('account24');
+$query24->select('savings')->from('account24');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query24);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user25') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query25 = $db->getQuery(true);
+$query->select('checking')->from('account25');
+$query25->select('savings')->from('account25');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query25);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user26') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query26 = $db->getQuery(true);
+$query->select('checking')->from('account26');
+$query26->select('savings')->from('account26');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query26);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user27') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query27 = $db->getQuery(true);
+$query->select('checking')->from('account27');
+$query27->select('savings')->from('account27');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query27);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user28') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query28 = $db->getQuery(true);
+$query->select('checking')->from('account28');
+$query28->select('savings')->from('account28');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query28);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user29') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query29 = $db->getQuery(true);
+$query->select('checking')->from('account29');
+$query29->select('savings')->from('account29');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query29);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user30') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query30 = $db->getQuery(true);
+$query->select('checking')->from('account30');
+$query30->select('savings')->from('account30');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query30);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user31') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query31 = $db->getQuery(true);
+$query->select('checking')->from('account31');
+$query31->select('savings')->from('account31');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query31);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user32') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query32 = $db->getQuery(true);
+$query->select('checking')->from('account32');
+$query32->select('savings')->from('account32');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query32);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user33') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query33 = $db->getQuery(true);
+$query->select('checking')->from('account33');
+$query33->select('savings')->from('account33');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query33);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user34') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query34 = $db->getQuery(true);
+$query->select('checking')->from('account34');
+$query34->select('savings')->from('account34');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query34);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user35') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query35 = $db->getQuery(true);
+$query->select('checking')->from('account35');
+$query35->select('savings')->from('account35');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query35);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user36') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query36 = $db->getQuery(true);
+$query->select('checking')->from('account36');
+$query36->select('savings')->from('account36');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query36);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user37') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query37 = $db->getQuery(true);
+$query->select('checking')->from('account37');
+$query37->select('savings')->from('account37');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query37);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user38') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query38 = $db->getQuery(true);
+$query->select('checking')->from('account38');
+$query38->select('savings')->from('account38');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query38);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user39') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query39 = $db->getQuery(true);
+$query->select('checking')->from('account39');
+$query39->select('savings')->from('account39');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query39);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user40') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query40 = $db->getQuery(true);
+$query->select('checking')->from('account40');
+$query40->select('savings')->from('account40');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query40);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user41') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query41 = $db->getQuery(true);
+$query->select('checking')->from('account41');
+$query41->select('savings')->from('account41');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query41);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user42') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query42 = $db->getQuery(true);
+$query->select('checking')->from('account42');
+$query42->select('savings')->from('account42');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query42);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user43') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query43 = $db->getQuery(true);
+$query->select('checking')->from('account43');
+$query43->select('savings')->from('account43');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query43);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+}  
+else if ($user->username == 'user44') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query44 = $db->getQuery(true);
+$query->select('checking')->from('account44');
+$query44->select('savings')->from('account44');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query44);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+else if ($user->username == 'user45') {
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query45 = $db->getQuery(true);
+$query->select('checking')->from('account45');
+$query45->select('savings')->from('account45');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$form['fields']['checking']['value'] = '$'.$check.' ';
+
+$db->setQuery($query45);
+$sav = $db->loadResult();
+
+$form['fields']['savings']['value'] = '$'.$sav.' ';
+
+} 
+ 
+
+
+ 
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+ 
+
+ 
+
+
+
+;return true;}

@@ -1,0 +1,56 @@
+<?php
+defined('_JEXEC') or die;
+function tassos_php_0b2dff44dc328d455de08b57ad1826e9(&$displayData = null) {
+                if ($displayData) {
+                    extract($displayData, EXTR_REFS);
+                }
+            
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account1');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account1');
+
+$query->set('account1.checking = '.$upcheck.', account1.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote(date('Y-m-d')), $db->quote('Transfer to Checking'),  $transfer);
+ $query->insert($db->quoteName('history1'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  
+
+
+;return true;}

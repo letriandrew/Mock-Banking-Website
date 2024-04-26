@@ -1,0 +1,1 @@
+ALTER TABLE `#__sppagebuilder` ADD `attribs` varchar(5120) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '[]' AFTER `checked_out_time`;

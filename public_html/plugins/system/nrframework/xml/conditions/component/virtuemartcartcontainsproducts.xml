@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general">
+		<field name="operator" type="comparator"/>
+        <field name="value" type="virtuemartcomponentitems"
+            label="NR_CART_CONTAINS_PRODUCTS"
+            description="NR_CART_CONTAINS_PRODUCTS_DESC"
+            multiple="true"
+            class="hasChosen"
+			column_id="virtuemart_product_id"
+			column_title="product_name"
+			column_state="p.published"
+			join="#__virtuemart_products as p ON i.virtuemart_product_id = p.virtuemart_product_id"
+        />
+    </fieldset>
+</form>

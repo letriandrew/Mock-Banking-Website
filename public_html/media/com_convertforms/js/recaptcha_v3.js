@@ -1,0 +1,2 @@
+!function(e){"use strict";ConvertForms.Helper.onReady(function(){grecaptcha.ready(function(){e.querySelectorAll(".g-v3-recaptcha").forEach(function(e){var t=e.closest(".convertforms"),n=e.dataset.sitekey,r=t.querySelector(".g-recaptcha-response");t.addEventListener("beforeSubmit",function(e){e.defaultPrevented||""===r.value&&(e.preventDefault(),grecaptcha.execute(n,{action:"convert_forms_"+t.dataset.id+"_submit"}).then(function(e){r.value=e,t.ConvertForms.submit()}))}),t.addEventListener("afterSubmit",function(e){r.value=""})})})})}((window,document));
+

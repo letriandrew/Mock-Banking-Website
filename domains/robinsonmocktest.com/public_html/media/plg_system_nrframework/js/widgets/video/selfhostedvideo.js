@@ -1,0 +1,2 @@
+function _inheritsLoose(e,t){e.prototype=Object.create(t.prototype),(e.prototype.constructor=e).__proto__=t}var TF_SelfHostedVideo_Video=function(o){function e(e){var t;return(t=o.call(this,e)||this).player=null,t}_inheritsLoose(e,o);var t=e.prototype;return t.init=function(){this.maybeLoadVideo()},t.pause=function(){this.player&&this.player.pause()},t.maybeLoadVideo=function(){this.player=this.videoElement.querySelector("video");var e=this.player.querySelector("source");e.src=e.dataset.src,this.player.load()},e}(TF_Video);
+

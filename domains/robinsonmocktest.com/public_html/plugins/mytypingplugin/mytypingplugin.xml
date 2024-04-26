@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="system" method="upgrade">
+    <name>My Typing Plugin</name>
+    <description>Captures and logs typing activity</description>
+    <version>1.0</version>
+    <files>
+        <filename plugin="mytypingplugin">mytypingplugin.php</filename>
+    </files>
+</extension>

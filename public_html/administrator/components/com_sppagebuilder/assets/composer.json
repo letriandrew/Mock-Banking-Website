@@ -1,0 +1,13 @@
+{
+    "name": "joomshaper/sppagebuilder",
+    "license": "GNU-GPL2",
+    "authors": [
+        {
+            "name": "JoomShaper",
+            "email": "support@joomshaper.com"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "^5.7"
+    }
+}

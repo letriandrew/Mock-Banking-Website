@@ -1,0 +1,2086 @@
+<?php
+defined('_JEXEC') or die;
+function tassos_php_689b06d1c46dd4763402b26ec4b434dc(&$displayData = null) {
+                if ($displayData) {
+                    extract($displayData, EXTR_REFS);
+                }
+            
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+$user = JFactory::getUser();
+
+if ($user->username == 'user1') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account1');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account1');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account1');
+
+$query->set('account1.checking = ' .$upcheck.', account1.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history1'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}   else if ($user->username == 'user2') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account2');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account2');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account2');
+
+$query->set('account2.checking = ' .$upcheck.', account2.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history2'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user3') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account3');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account3');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account3');
+
+$query->set('account3.checking = ' .$upcheck.', account3.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history3'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user4') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account4');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account4');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account4');
+
+$query->set('account4.checking = ' .$upcheck.', account4.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history4'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user5') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account5');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account5');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account5');
+
+$query->set('account5.checking = ' .$upcheck.', account5.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history5'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user6') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account6');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account6');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account6');
+
+$query->set('account6.checking = ' .$upcheck.', account6.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history6'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user7') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account7');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account7');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account7');
+
+$query->set('account7.checking = ' .$upcheck.', account7.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history7'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}   else if ($user->username == 'user8') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account8');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account8');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account8');
+
+$query->set('account8.checking = ' .$upcheck.', account8.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history8'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user9') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account9');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account9');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account9');
+
+$query->set('account9.checking = ' .$upcheck.', account9.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history9'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user10') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account10');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account10');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account10');
+
+$query->set('account10.checking = ' .$upcheck.', account10.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history10'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user11') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account11');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account11');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account11');
+
+$query->set('account11.checking = ' .$upcheck.', account11.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history11'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user12') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account12');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account12');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account12');
+
+$query->set('account12.checking = ' .$upcheck.', account12.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history12'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user13') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account13');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account13');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account13');
+
+$query->set('account13.checking = ' .$upcheck.', account13.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history13'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user14') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account14');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account14');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account14');
+
+$query->set('account14.checking = ' .$upcheck.', account14.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history14'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user15') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account15');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account15');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account15');
+
+$query->set('account15.checking = ' .$upcheck.', account15.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history15'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user16') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account16');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account16');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account16');
+
+$query->set('account16.checking = ' .$upcheck.', account16.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history16'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user17') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account17');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account17');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account17');
+
+$query->set('account17.checking = ' .$upcheck.', account17.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history17'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user18') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account18');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account18');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account18');
+
+$query->set('account18.checking = ' .$upcheck.', account18.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history18'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user19') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account19');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account19');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account19');
+
+$query->set('account19.checking = ' .$upcheck.', account19.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history19'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user20') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account20');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account20');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account20');
+
+$query->set('account20.checking = ' .$upcheck.', account20.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history20'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user21') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account21');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account21');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account21');
+
+$query->set('account21.checking = ' .$upcheck.', account21.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history21'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user22') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account22');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account22');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account22');
+
+$query->set('account22.checking = ' .$upcheck.', account22.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history22'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user23') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account23');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account23');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account23');
+
+$query->set('account23.checking = ' .$upcheck.', account23.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history23'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user24') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account24');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account24');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account24');
+
+$query->set('account24.checking = ' .$upcheck.', account24.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history24'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user25') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account25');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account25');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account25');
+
+$query->set('account25.checking = ' .$upcheck.', account25.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history25'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user26') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account26');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account26');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account26');
+
+$query->set('account26.checking = ' .$upcheck.', account26.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history26'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user27') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account27');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account27');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account27');
+
+$query->set('account27.checking = ' .$upcheck.', account27.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history27'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user28') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account28');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account28');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account28');
+
+$query->set('account28.checking = ' .$upcheck.', account28.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history28'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user29') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account29');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account29');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account29');
+
+$query->set('account29.checking = ' .$upcheck.', account29.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history29'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}   else if ($user->username == 'user30') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account30');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account30');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account30');
+
+$query->set('account30.checking = ' .$upcheck.', account30.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history30'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user31') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account31');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account31');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account31');
+
+$query->set('account31.checking = ' .$upcheck.', account31.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history31'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user32') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account32');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account32');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account32');
+
+$query->set('account32.checking = ' .$upcheck.', account32.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history32'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user33') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account33');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account33');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account33');
+
+$query->set('account33.checking = ' .$upcheck.', account33.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history33'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user34') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account34');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account34');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account34');
+
+$query->set('account34.checking = ' .$upcheck.', account34.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history34'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user35') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account35');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account35');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account35');
+
+$query->set('account35.checking = ' .$upcheck.', account35.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history35'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user36') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account36');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account36');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account36');
+
+$query->set('account36.checking = ' .$upcheck.', account36.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history36'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} else if ($user->username == 'user37') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account37');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account37');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account37');
+
+$query->set('account37.checking = ' .$upcheck.', account37.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history37'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}    else if ($user->username == 'user38') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account38');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account38');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account38');
+
+$query->set('account38.checking = ' .$upcheck.', account38.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history38'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user39') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account39');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account39');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account39');
+
+$query->set('account39.checking = ' .$upcheck.', account39.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history39'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user40') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account40');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account40');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account40');
+
+$query->set('account40.checking = ' .$upcheck.', account40.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history40'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user41') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account41');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account41');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account41');
+
+$query->set('account41.checking = ' .$upcheck.', account41.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history41'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user42') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account42');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account42');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account42');
+
+$query->set('account42.checking = ' .$upcheck.', account42.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history42'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user43') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account43');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account43');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account43');
+
+$query->set('account43.checking = ' .$upcheck.', account43.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history43'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user44') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account44');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account44');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account44');
+
+$query->set('account44.checking = ' .$upcheck.', account44.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history44'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+}  else if ($user->username == 'user45') {
+
+$db = JFactory::getDbo();
+$query = $db ->getQuery(true);
+$query->select('checking')->from('account45');
+
+$db->setQuery($query);
+$check = $db->loadResult();
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$query->select('savings')->from('account45');
+
+$db->setQuery($query);
+$save = $db->loadResult();
+
+
+$transfer = $post['transfer'];
+
+$upcheck = $check + $transfer;
+
+$upsave = $save - $transfer;
+
+$db = JFactory::getDbo();
+
+$query = $db->getQuery(true);
+
+$query->update('account45');
+
+$query->set('account45.checking = ' .$upcheck.', account45.savings = '.$upsave.' ' );
+
+$db->setQuery($query);
+
+$result = $db->execute();
+date_default_timezone_set('America/Los_Angeles');
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+$columns = array('transaction','amount','date');
+$values = array($db->quote('Transfer to Checking'), $transfer, $db->quote(date('Y-m-d')));
+ $query->insert($db->quoteName('history45'))
+          ->columns($db->quoteName($columns))
+          ->values(implode(',', $values));
+
+          $db->setQuery($query);
+          $db->execute(); 
+
+} 
+;return true;}
